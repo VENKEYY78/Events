@@ -1,0 +1,31 @@
+li {
+  height: 30%;
+  width: 45%;
+  margin: 10px;
+  padding: 0px;
+}
+
+.event-image {
+  height: 130px;
+  border-radius: 10px;
+}
+
+.festivel-name {
+  font-size: 20px;
+  font-family: 'Roboto';
+  color: #f8fafc;
+  margin-bottom: 10px;
+}
+
+.location {
+  font-size: 13px;
+  font-family: 'Roboto';
+  color: #f8fafc;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
