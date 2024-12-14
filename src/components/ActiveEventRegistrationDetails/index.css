@@ -1,1 +1,46 @@
-/* Write your CSS here */
+.registerd-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  color: #4caf50;
+  font-size: 2px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.register-img {
+  height: 100px;
+}
+
+.yet-to-img {
+  height: 200px;
+}
+
+p {
+  font-size: 20px;
+  font-weight: 'Roboto';
+}
+
+.closed-img {
+  height: 300px;
+}
+
+button {
+  height: 30px;
+  width: 120px;
+  background-color: #0967d2;
+  color: yellowgreen;
+}
+
+.active-event-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  width: 40%;
+  height: 100vh;
+}

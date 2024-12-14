@@ -1,26 +1,18 @@
 import './index.css'
 
 const EventItem = props => {
-  const {eachEventDetails} = props
-  const {
-    imageUrl,
-    location,
-    name,
-    onClickEvents,
-    registrationStatus,
-  } = eachEventDetails
+  const {eachEventDetails, onClickEvent} = props
+  const {imageUrl, location, name, registrationStatus} = eachEventDetails
 
-  const onClickEvent = () => {
-    onClickEvents(registrationStatus)
+  const clickEvent = () => {
+    onClickEvent(registrationStatus)
   }
 
   return (
-    <li>
-      <button className="button" type="button" onClick={onClickEvent}>
-        <img src={imageUrl} alt={name} className="event-image" />
-        <h1 className="festivel-name">{name}</h1>
-        <p className="location">{location}</p>
-      </button>
+    <li className="button" onClick={clickEvent}>
+      <img src={imageUrl} alt="event" className="event-image" />
+      <p className="festivel-name">{name}</p>
+      <p className="location">{location}</p>
     </li>
   )
 }

@@ -55,10 +55,48 @@ const eventsList = [
     registrationStatus: 'REGISTRATIONS_CLOSED',
   },
 ]
-// Write your code here
 
 class Events extends Component {
   state = {
+    status: 'Initiall',
+  }
+
+  onClickEvent = registrationState => {
+    //  const {status} = this.state
+    this.setState({status: registrationState})
+  }
+
+  render() {
+    const {status} = this.state
+
+    //    console.log(status)
+    return (
+      <>
+        <div className="event-app">
+          <div className="events-app-bg-container">
+            <h1 className="heading">Events</h1>
+            <ul className="eachEvent-container">
+              {eventsList.map(eachEvent => (
+                <EventItem
+                  eachEventDetails={eachEvent}
+                  key={eachEvent.id}
+                  onClickEvent={this.onClickEvent}
+                />
+              ))}
+            </ul>
+          </div>
+          <ul className="activeEvent-Container">
+            <ActiveEventRegistrationDetails status={status} />
+          </ul>
+        </div>
+      </>
+    )
+  }
+}
+
+export default Events
+
+/* state = {
     ActiveRegistrationStatus: '',
   }
 
@@ -70,31 +108,21 @@ class Events extends Component {
   render() {
     const {ActiveRegistrationStatus} = this.state
     return (
-      <>
-        <div className="event-app">
-          <div className="events-app-bg-container">
-            <h1 className="heading">Events</h1>
-            <ul className="eachEvent-container">
-              {eventsList.map(eachEvent => (
-                <EventItem
-                  eachEventDetails={eachEvent}
-                  key={eachEvent}
-                  onClickEvents={this.onClickEvents()}
-                />
-              ))}
-            </ul>
-          </div>
+      onClickEvents={this.onClickEvents()}
           <div className="event-status-container">
             <ActiveEventRegistrationDetails
               registrationStatus={ActiveRegistrationStatus}
             />
           </div>
-        </div>
+       
       </>
     )
-  }
-}
-
-export default Events
+  } 
+  */
 
 //
+
+/* Write your code here
+
+
+*/
